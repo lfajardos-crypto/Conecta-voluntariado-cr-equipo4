@@ -1,3 +1,5 @@
+![avance-1](https://img.shields.io/badge/:badgeContent)
+
 # ConectaVoluntariado CR
 Proyecto Integrador 1 · SOFT-11C1 · 2026-C3
 
