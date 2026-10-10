@@ -5,7 +5,7 @@ Proyecto Integrador 1 · SOFT-11C1 · 2026-C3
 
 ## Equipo
 - Leidy Fajardo Sanchez — lfajardos@ucenfotec.ac.cr
-- David Cordero Navarro — carne
+- David Cordero Navarro — davidcnc22@gmail.com
 - Mario Castro Chacon — mcastroch@ucenfotec.ac.cr
 
 ## Enlace directo a la ERS
