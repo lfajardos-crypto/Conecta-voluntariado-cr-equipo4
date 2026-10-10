@@ -8,5 +8,8 @@ Proyecto Integrador 1 · SOFT-11C1 · 2026-C3
 - David Cordero Navarro — carne
 - Mario Castro Chacon — carné
 
+## Enlace directo a la ERS
+https://github.com/lfajardos-crypto/Conecta-voluntariado-cr-equipo4/blob/63f4800b8a72aba293f2d53696f639d44fb412b7/docs/requirements/ERS-ConectaVoluntariado-Equipo04-v1.0..docx
+
 ## Documentación
 La documentación del proyecto se mantiene en `docs/`.
