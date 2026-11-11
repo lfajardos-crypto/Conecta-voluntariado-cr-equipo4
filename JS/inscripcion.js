@@ -23,14 +23,9 @@ function mostrarAlerta(icono, titulo, texto) {
 
 async function cargarActividades() {
     try {
-        const respuesta = await fetch("/Conecta-voluntariado-cr-equipo4/data/actividades.json");
-        if (!respuesta.ok) {
-            throw new Error(`Error HTTP ${respuesta.status}`);
-        }
-
-        const datos = await respuesta.json();
+        const datos = actividades;
         if (!Array.isArray(datos) || datos.length === 0) {
-            throw new Error("El archivo no contiene actividades.");
+            throw new Error("No hay actividades disponibles.");
         }
         if (datos.some((actividad) =>
             actividad.ID === undefined || actividad.ID === null || !actividad.Nombre
