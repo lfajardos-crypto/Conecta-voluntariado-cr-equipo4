@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Plataforma para inscribirse en actividades comunitarias en Costa Rica">
+    <link rel="stylesheet" href="/Conecta-voluntariado-cr-equipo4/css/estilos.css">
     <title>Inscripción</title>
 </head>
 <body>
@@ -13,9 +14,9 @@
 
         <nav aria-label="Navegación principal" class="navegacion-principal">
             <ul>
-                <li><a href="index.html" >Inicio</a></li>
-                <li><a href="actividades.html">Actividades</a></li>
-                <li><a href="inscripcion.html" aria-current="page">Inscripción</a></li>
+                <li><a href="/Conecta-voluntariado-cr-equipo4/html/index.html" >Inicio</a></li>
+                <li><a href="/Conecta-voluntariado-cr-equipo4/html/actividades.html">Actividades</a></li>
+                <li><a href="/Conecta-voluntariado-cr-equipo4/html/inscripcion.html" aria-current="page">Inscripción</a></li>
             </ul>
         </nav>
     </header>
@@ -48,6 +49,16 @@
                     </select>
                 </div>
 
+                <div>
+                    <label for="motivacion">Motivación para participar</label>
+                    <textarea id="motivacion" name="motivacion" rows="5" required></textarea>
+                </div>
+
+                <div class="campo-confirmacion">
+                    <input id="confirmacion" name="confirmacion" type="checkbox" required>
+                    <label for="confirmacion">Confirmo que la información ingresada es correcta.</label>
+                </div>
+
                 <button id="enviar-inscripcion" type="submit" disabled>Enviar inscripción</button>
             </form>
 
@@ -55,6 +66,7 @@
         </section>
     </main>
 
-    <script src="../Conecta-voluntariado-cr-equipo4/JS/inscripcion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/Conecta-voluntariado-cr-equipo4/js/inscripcion.js"></script>
 </body>
 </html>
