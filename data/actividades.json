@@ -1,0 +1,42 @@
+[
+  {
+    "ID": 1,
+    "Nombre": "Reforestación en el Parque Nacional",
+    "Descripción": "Participa en la reforestación de áreas degradadas del parque nacional, ayudando a plantar árboles nativos y restaurar el ecosistema.",
+    "Área Temática": "Ambiente",
+    "Provincia/Cantón": "San José, Costa Rica",
+    "Requisitos": "Ser mayor de 18 años, tener buena condición física, y asistir a una sesión de orientación previa."
+  },
+  {
+    "ID": 2,
+    "Nombre": "Clases de apoyo escolar",
+    "Descripción": "Ayuda a niños y jóvenes con sus tareas escolares y refuerza sus conocimientos en matemáticas, ciencias y lectura.",
+    "Área Temática": "Educación",
+    "Provincia/Cantón": "Alajuela, Costa Rica",
+    "Requisitos": "Tener experiencia en enseñanza o tutoría, ser paciente y comprometido con la educación."
+  },
+  {
+    "ID": 3,
+    "Nombre": "Campaña de limpieza de playas",
+    "Descripción": "Únete a un grupo de voluntarios para limpiar las playas locales, recolectando basura y promoviendo la conciencia ambiental.",
+    "Área Temática": "Ambiente",
+    "Provincia/Cantón": "Puntarenas, Costa Rica",
+    "Requisitos": "Ser mayor de 16 años, llevar ropa cómoda y guantes de protección."
+  },
+  {
+    "ID": 4,
+    "Nombre": "Talleres de arte para niños",
+    "Descripción": "Organiza y facilita talleres de arte para niños en comunidades desfavorecidas, fomentando la creatividad y expresión artística.",
+    "Área Temática": "Cultura",
+    "Provincia/Cantón": "Heredia, Costa Rica",
+    "Requisitos": "Tener habilidades artísticas, experiencia trabajando con niños y ser creativo."
+  },
+  {
+    "ID": 5,
+    "Nombre": "Asistencia en refugios de animales",
+    "Descripción": "Ayuda en refugios de animales cuidando a los animales, limpiando sus espacios y colaborando en actividades de adopción.",
+    "Área Temática": "Bienestar Animal",
+    "Provincia/Cantón": "Cartago, Costa Rica",
+    "Requisitos": "Amor por los animales, disponibilidad para colaborar en las tareas diarias del refugio."
+  }
+]
