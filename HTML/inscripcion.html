@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plataforma para inscribirse en actividades comunitarias en Costa Rica">
+    <title>Inscripción</title>
+</head>
+<body>
+    <header class="header-principal">
+        <p class="marca"><strong>Inscripción</strong></p>
+
+        <nav aria-label="Navegación principal" class="navegacion-principal">
+            <ul>
+                <li><a href="index.html" >Inicio</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="inscripcion.html" aria-current="page">Inscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="titulo-inscripcion">
+            <h1 id="titulo-inscripcion">Formulario de inscripción</h1>
+            <p>Completa tus datos y selecciona la actividad en la que deseas participar.</p>
+
+            <form id="formulario-inscripcion" novalidate>
+                <div>
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+                </div>
+
+                <div>
+                    <label for="actividad">Actividad</label>
+                    <select id="actividad" name="actividad" required disabled>
+                        <option value="">Cargando actividades...</option>
+                    </select>
+                </div>
+
+                <button id="enviar-inscripcion" type="submit" disabled>Enviar inscripción</button>
+            </form>
+
+            <p id="mensaje-inscripcion" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="../Conecta-voluntariado-cr-equipo4/JS/inscripcion.js"></script>
+</body>
+</html>
