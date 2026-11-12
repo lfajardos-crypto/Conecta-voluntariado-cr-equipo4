@@ -136,6 +136,109 @@ main > section {
     box-shadow: 0 0.5rem 1.5rem #285b4210;
 }
 
+main > .hero {
+    display: grid;
+    min-height: 380px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border: 1px solid #dcefe1;
+    background:
+        radial-gradient(circle at 0 0, #dcefe1 0, transparent 42%),
+        linear-gradient(135deg, #fff, #f8fcf8);
+    box-shadow: 0 1rem 2.5rem #285b4218;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-etiqueta {
+    display: inline-flex;
+    margin: 0 0 1rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #c9ddce;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--verde-oscuro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.hero h1 {
+    max-width: 16ch;
+    margin: 0;
+    color: var(--verde-oscuro);
+    font-size: clamp(2rem, 4.4vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+}
+
+.hero-contenido > p:not(.hero-etiqueta) {
+    max-width: 54ch;
+    margin: 1.1rem 0 1.5rem;
+    color: #4c6254;
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 290px;
+    overflow: hidden;
+    border: 6px solid #fff;
+    border-radius: 1.25rem 4rem 1.25rem 4rem;
+    background-color: var(--verde-pastel);
+    background-image:
+        linear-gradient(0deg, #10271d88, transparent 55%),
+        url("https://group-ism.com/wp-content/uploads/2024/01/Voluntarios-ISM-participaron-en-jornada-de-limpieza-de-playas-de-Huacho-2.jpg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 1rem 2rem #193e2c2e;
+}
+
+.hero-visual span {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 0 1px 5px #000;
+}
+
+.hero .boton-hero {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.25rem;
+    border: 2px solid var(--verde-oscuro);
+    border-radius: 0.65rem;
+    background: var(--verde-oscuro);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0.35rem 1rem #10271d33;
+    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.hero .boton-hero:hover {
+    transform: translateY(-2px);
+    background: var(--verde-pastel);
+    color: var(--verde-oscuro);
+    box-shadow: 0 0.6rem 1.25rem #10271d4d;
+}
+
+.hero .boton-hero:focus-visible {
+    outline: 3px solid #b7e2c4;
+    outline-offset: 4px;
+}
+
 main > .hero-proceso {
     overflow: hidden;
     border: 0;
@@ -566,6 +669,17 @@ select:disabled {
 
     .seccion-actividades {
         padding: 1rem;
+    }
+
+    main > .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-visual {
+        min-height: 230px;
+        border-radius: 1rem 3rem 1rem 3rem;
     }
 
     .cards-grid {
