@@ -578,15 +578,16 @@ a:focus-visible {
 
 form button {
     align-self: end;
-    border-color: var(--verde);
-    background: var(--verde);
+    border-color: var(--verde-oscuro);
+    background: var(--verde-oscuro);
     color: #fff;
     font-weight: 700;
     cursor: pointer;
 }
 
 form button:hover:not(:disabled) {
-    background: var(--verde-oscuro);
+    background: var(--verde-pastel);
+    color: var(--verde-oscuro);
 }
 
 button:disabled,
