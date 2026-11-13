@@ -13,3 +13,6 @@ https://github.com/lfajardos-crypto/Conecta-voluntariado-cr-equipo4/blob/63f4800
 
 ## Documentación
 La documentación del proyecto se mantiene en `docs/`.
+
+## Como ejecutar el proyecto:
+Link del proyecto: http://127.0.0.1:5500/html/index.html
