@@ -1,7 +1,10 @@
 const cuerpoTablaActividades = document.getElementById("cuerpo-tabla-actividades");
 const filtroAreaTematica = document.getElementById("filtro-area-tematica");
 
-const areasTematicas = [...new Set(actividades.map((actividad) => actividad["Área Temática"]))];
+const areasTematicas = [...new Set([
+    ...actividades.map((actividad) => actividad["Área Temática"]),
+    "Salud"
+])];
 areasTematicas.forEach((area) => {
     const opcion = document.createElement("option");
     opcion.value = area;
@@ -21,7 +24,7 @@ function mostrarActividades() {
         const fila = document.createElement("tr");
         const celda = document.createElement("td");
         celda.colSpan = 6;
-        celda.textContent = "No hay actividades para esta área temática.";
+        celda.textContent = "No encontramos actividades para el área temática seleccionada. Prueba con otra área o selecciona “Todas las áreas”.";
         fila.appendChild(celda);
         cuerpoTablaActividades.appendChild(fila);
         return;
