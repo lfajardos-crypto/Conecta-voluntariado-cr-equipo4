@@ -23,7 +23,13 @@ function mostrarAlerta(icono, titulo, texto) {
 
 async function cargarActividades() {
     try {
-        const datos = actividades;
+        const respuesta = await fetch("../data/actividades.json");
+
+    if (!respuesta.ok) {
+    throw new Error("No se pudo cargar el archivo JSON.");
+}
+
+const datos = await respuesta.json();
         if (!Array.isArray(datos) || datos.length === 0) {
             throw new Error("No hay actividades disponibles.");
         }
@@ -33,7 +39,13 @@ async function cargarActividades() {
             throw new Error("El archivo contiene actividades sin identificador o nombre.");
         }
 
-        actividadesDisponibles = datos;
+        actividadesDisponibles = datos.filter((actividad) =>
+        actividad.Estado === "Activa" && Number(actividad.Cupos) > 0
+);
+
+        if (actividadesDisponibles.length === 0) {
+         throw new Error("No hay actividades activas con cupos disponibles.");
+}
         selectorActividad.replaceChildren(new Option("Selecciona una actividad", ""));
         actividadesDisponibles.forEach((actividad) => {
             selectorActividad.add(new Option(actividad.Nombre, String(actividad.ID)));

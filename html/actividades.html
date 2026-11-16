@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Plataforma para visualizar actividades comunitarias en Costa Rica">
-    <script src="/js/data_actividades.js" defer></script>
-    <script src="/js/actividades.js" defer></script>
+    <script src="../js/actividades.js" defer></script>
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Actividades</title>
 </head>
@@ -16,8 +16,8 @@
 
         <nav aria-label="Navegación principal" class="navegacion-principal">
             <ul>
-                <li><a href="../html/index.html" >Inicio</a></li>
-                <li><a href="../html/actividades.html"aria-current="page">Actividades</a></li>
+                <li><a href="../html/index.html">Inicio</a></li>
+                <li><a href="../html/actividades.html" aria-current="page">Actividades</a></li>
                 <li><a href="../html/inscripcion.html">Inscripción</a></li>
             </ul>
         </nav>
@@ -57,12 +57,15 @@
                     <caption>Lista de actividades registradas</caption>
                     <thead>
                         <tr>
-                            <th >ID</th>
-                            <th >Nombre de la actividad</th>
-                            <th >Descripción</th>
-                            <th >Área temática</th>
-                            <th >Provincia/Cantón</th>
-                            <th >Requisitos</th>
+                            <th>ID</th>
+                            <th>Nombre de la actividad</th>
+                            <th>Descripción</th>
+                            <th>Área temática</th>
+                            <th>Provincia/Cantón</th>
+                            <th>Requisitos</th>
+                            <th>Fecha</th>
+                            <th>Cupos</th>
+                            <th>Estado</th>
                         </tr>
                     </thead>
                     <tbody id="cuerpo-tabla-actividades"></tbody>
@@ -83,10 +86,10 @@
 
     <details class="marca-flotante">
         <summary aria-label="Conoce quiénes somos"></summary>
-        <p>ConectaVoluntariado CR une a personas con iniciativas comunitarias para construir, con solidaridad y acción, un futuro mejor para Costa Rica.</p><hr>
+        <p>ConectaVoluntariado CR une a personas con iniciativas comunitarias para construir, con solidaridad y acción, un futuro mejor para Costa Rica.</p>
+        <hr>
         <p>© 2024 ConectaVoluntariado CR. Todos los derechos reservados.</p>
     </details>
 
-    
 </body>
 </html>
