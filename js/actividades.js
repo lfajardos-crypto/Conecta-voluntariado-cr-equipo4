@@ -1,16 +1,41 @@
+
 const cuerpoTablaActividades = document.getElementById("cuerpo-tabla-actividades");
 const filtroAreaTematica = document.getElementById("filtro-area-tematica");
 
-const areasTematicas = [...new Set([
-    ...actividades.map((actividad) => actividad["Área Temática"]),
-    "Salud"
-])];
-areasTematicas.forEach((area) => {
-    const opcion = document.createElement("option");
-    opcion.value = area;
-    opcion.textContent = area;
-    filtroAreaTematica.appendChild(opcion);
-});
+let actividades = [];
+
+// Cargar las actividades desde el archivo JSON
+async function cargarActividades() {
+    try {
+        const respuesta = await fetch("../data/actividades.json");
+
+        if (!respuesta.ok) {
+            throw new Error("No se pudo cargar el archivo JSON.");
+        }
+
+        actividades = await respuesta.json();
+
+        const areasTematicas = [...new Set([
+            ...actividades.map((actividad) => actividad["Área Temática"]),
+            "Salud"
+        ])];
+
+        areasTematicas.forEach((area) => {
+            const opcion = document.createElement("option");
+            opcion.value = area;
+            opcion.textContent = area;
+            filtroAreaTematica.appendChild(opcion);
+        });
+
+        mostrarActividades();
+
+    } catch (error) {
+        console.error("Error al cargar actividades:", error);
+
+        cuerpoTablaActividades.innerHTML =
+            '<tr><td colspan="9">No se pudieron cargar las actividades.</td></tr>';
+    }
+}
 
 function mostrarActividades() {
     const areaSeleccionada = filtroAreaTematica.value;
@@ -23,7 +48,7 @@ function mostrarActividades() {
     if (actividadesFiltradas.length === 0) {
         const fila = document.createElement("tr");
         const celda = document.createElement("td");
-        celda.colSpan = 6;
+        celda.colSpan = 9;
         celda.textContent = "No encontramos actividades para el área temática seleccionada. Prueba con otra área o selecciona “Todas las áreas”.";
         fila.appendChild(celda);
         cuerpoTablaActividades.appendChild(fila);
@@ -38,7 +63,10 @@ function mostrarActividades() {
             actividad["Descripción"],
             actividad["Área Temática"],
             actividad["Provincia/Cantón"],
-            actividad.Requisitos
+            actividad.Requisitos,
+            actividad.Fecha,
+            actividad.Cupos,
+            actividad.Estado
         ];
 
         valores.forEach((valor) => {
@@ -52,4 +80,4 @@ function mostrarActividades() {
 }
 
 filtroAreaTematica.addEventListener("change", mostrarActividades);
-mostrarActividades();
+cargarActividades();
